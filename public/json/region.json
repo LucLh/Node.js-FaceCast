@@ -1,0 +1,18 @@
+{
+    "regionInfo":[
+        {"num":"01","dep":"Ain","prefecture":"Bourg-en-Bresse","regionAdmin":"Rhône-Alpes"},
+        {"num":"02","dep":"Aisne","prefecture":"Laon","regionAdmin":"Picardie"},
+        {"num":"03","dep":"Allier","prefecture":"Moulin","regionAdmin":"Auvergnes"},
+        {"num":"04","dep":"Alpes de Hautes-Provence","prefecture":"Digne","regionAdmin":"Provence-Alpes-Côte d'Azur"},
+        {"num":"05","dep":"Hautes-Alpes","prefecture":"Gap","regionAdmin":"Provence-Alpes-Côte d'Azur"},
+        {"num":"06","dep":"Alpes-Maritimes","prefecture":"Nice","regionAdmin":"Provence-Alpes-Côte d'Azur"},
+        {"num":"07","dep":"Ardèche","prefecture":"Privas","regionAdmin":"Rhône-Alpes"},
+        {"num":"08","dep":"Ardennes","prefecture":"Charleville-Mézières","regionAdmin":"Champagne-Ardenne"},
+        {"num":"09","dep":"Ariège","prefecture":"Foix","regionAdmin":"Midi-Pyrénées"},
+        {"num":"10","dep":"Aube","prefecture":"Troyes","regionAdmin":"Champagne-Ardenne"},
+        {"num":"11","dep":"Aube","prefecture":"Carcassonne","regionAdmin":"Languedoc-Roussillon"},
+        {"num":"12","dep":"Aveyron","prefecture":"Rodez","regionAdmin":"Midi-Pyrénées"},
+        {"num":"13","dep":"Bouches-du-Rhône","prefecture":"Marseille","regionAdmin":"Provence-Alpes-Côte d'Azur"},
+        {"num":"14","dep":"Calvados","prefecture":"Caen","regionAdmin":"Basse-Normandie"}
+    ]
+}

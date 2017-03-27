@@ -1,0 +1,24 @@
+extends layout
+block header
+  h1= header
+block content
+  table
+    tr
+      th Nom
+      th Date
+      th Département
+      th Ville
+      th Type d'événement
+
+    each event in eventlist
+      tr
+        td= event.name
+        td= event.date
+        td= event.department
+        td= event.city
+        td= event.eventType
+        td
+          a(href='/update') update
+        td
+          a(href='/delete/'+event._id) delete
+      
