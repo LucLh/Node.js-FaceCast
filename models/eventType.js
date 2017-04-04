@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var eventTypeSchema = Schema({
+var eventTypeSchema = new Schema({
     'type' : String
 });
 

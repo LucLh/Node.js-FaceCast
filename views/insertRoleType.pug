@@ -1,0 +1,24 @@
+extends layout
+block header
+  h1= header
+block content
+  form(name='addRoleType', id='formAddRoleType', action='/insertRoleType/addRoleType', method='post')
+    h2 Ajout d'un type rôle
+    input(type="text", name='roleTypeName', id='inputRoleTypeName', placeholder="Nouveau type de rôle")
+    br
+    input(type="reset", value="Effacer")
+    input(type="submit", value="Enregistrer")
+    br
+  h2 Les types d'évènements
+  table
+    thead
+      tr
+        td ID type de rôle
+        td Type de rôle
+    tbody
+      each roleType in roletypelist
+        tr
+          td= roleType._id
+          td= roleType.type
+          td
+            button(onclick="deleteRoleType('"+roleType._id+"')") Delete

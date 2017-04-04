@@ -4,23 +4,39 @@ block header
 block content
 
   form(name='addEvent', id='formAddEvent', action='/insertEvent/addEvent',method='post')
-    input(type='text', name='eventName', id='inputEvent', placeholder="Nom de l'événement")
-    input(type='text', name='eventDate', id='inputDateEvent', placeholder="Date de l'événement")
+    h2 Ajout d'un évènement
+    input(type='text', name='eventName', id='inputEventName', placeholder="Nom de l'évènement")
+    br
+    input(type='text', name='eventDate', id='inputEventDate', placeholder="Date de l'évènement")
+    br
+    input(type='text', name='eventNbDays', id='inputEventNbDays', placeholder="Nombre de jours")
+    br
     select(name='eventRegion')
       option(disabled selected) Département concerné
       each region,i in regionlist
         option(value=region.dep)= region.num+" - "+region.dep+" ("+region.regionAdmin+") "
-    input(type="text", name="eventCity", id="inputEventCity", placeholder="Ville de l'événement")
+    br
+    input(type="text", name="eventCity", id="inputEventCity", placeholder="Ville de l'évènement")
+    br
     select(name="eventType")
-      option(disabled selected) Type d'événement
-      option(value='1') Film
-      option(value='2') Série
-      option(value='3') Spectacle
+      option(disabled selected) Type d'évènement
+      each eventT in eventtypelist
+        option(value=eventT._id)= eventT.type
+    br
+    input(type='text', name='eventRole', id='inputEventRole', placeholder="Rôle lié à l'évènement")
+    br
+    select(name="eventRoleType")
+      option(disabled selected) Type du rôle
+      each roleType in roletypelist
+        option(value=roleType._id)= roleType.type
+    br
     input(type="reset", value="Effacer")
     input(type="submit", value="Enregistrer")
-    
+    br
+
+
     script.
-      $( "#inputDateEvent" ).datepicker({
+      $( "#inputEventDate" ).datepicker({
         dateFormat: "dd-mm-yy",
         altFormat: "yy-mm-dd",
         dayNamesMin: [ "Di", "Lu", "Ma", "Me", "Je", "Ve", "Sa" ],

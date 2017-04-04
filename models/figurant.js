@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var figurantSchema = Schema({
-    '_id' : Number,
     'firstname' : String,
     'lastname' : String,
     'age' : Number,

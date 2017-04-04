@@ -2,23 +2,32 @@ extends layout
 block header
   h1= header
 block content
-  table
-    tr
-      th Nom
-      th Date
-      th Département
-      th Ville
-      th Type d'événement
-
-    each event in eventlist
+  h2 Évènements et rôles disponibles
+  table(style="text-align: center")
+    thead
       tr
-        td= event.name
-        td= event.date
-        td= event.department
-        td= event.city
-        td= event.eventType
-        td
-          a(href='/update') update
-        td
-          a(href='/delete/'+event._id) delete
-      
+        th Nom
+        th Début
+        th Nombre de jours
+        th Département
+        th Ville
+        th Type d'événement
+        th Rôle
+        th Type de rôle
+    tbody
+      each event in eventrolelist
+        tr
+          td= event._event.name
+          td= event._event.date
+          td= event._event.numberDays
+          td= event._event.department
+          td= event._event.city
+          td= event._event._eventType.type
+          td= event._role.name
+          td= event._role._roleType.type
+          td
+            a(href='/update') update
+          td
+            <!-- button(onclick="deleteEvent('"+event._event._id+"')") delete -->
+            button(onclick="deleteEventAndRole('"+event._event._id+"','"+event._role._id+"','"+event._id+"')") Delete
+            
