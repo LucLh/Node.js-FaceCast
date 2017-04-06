@@ -2,7 +2,7 @@ extends layout
 block header
   h1= header
 block content
-  h2 Évènements et rôles disponibles
+  h2 Événements et rôles disponibles
   table(style="text-align: center")
     thead
       tr
@@ -26,7 +26,8 @@ block content
           td= event._role.name
           td= event._role._roleType.type
           td
-            a(href='/update') update
+            form(action='/updateEvent/'+event._event._id+'&'+event._role._id+'&'+event._id, method='get')
+              input(type='submit', value='update')
           td
             <!-- button(onclick="deleteEvent('"+event._event._id+"')") delete -->
             button(onclick="deleteEventAndRole('"+event._event._id+"','"+event._role._id+"','"+event._id+"')") Delete

@@ -15,8 +15,8 @@ router.get('/', function(req,res,next) {
     eventType.find({},{},function(e,eventTypeDoc) {
         roleType.find({},{},function(e,roleTypeDoc) {
             res.render('insertEvent', { 
-                titlePage: "FaceCast | Ajout d'un évènement",
-                header: "Ajout d'un évènement", 
+                titlePage: "FaceCast | Ajout d'un événement",
+                header: "Ajout d'un événement", 
                 regionlist: obj,
                 eventtypelist : eventTypeDoc,
                 roletypelist : roleTypeDoc

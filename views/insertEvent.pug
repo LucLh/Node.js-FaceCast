@@ -4,10 +4,10 @@ block header
 block content
 
   form(name='addEvent', id='formAddEvent', action='/insertEvent/addEvent',method='post')
-    h2 Ajout d'un évènement
-    input(type='text', name='eventName', id='inputEventName', placeholder="Nom de l'évènement")
+    h2 Ajout d'un événement
+    input(type='text', name='eventName', id='inputEventName', placeholder="Nom de l'événement")
     br
-    input(type='text', name='eventDate', id='inputEventDate', placeholder="Date de l'évènement")
+    input(type='text', name='eventDate', id='inputEventDate', placeholder="Date de l'événement")
     br
     input(type='text', name='eventNbDays', id='inputEventNbDays', placeholder="Nombre de jours")
     br
@@ -16,14 +16,14 @@ block content
       each region,i in regionlist
         option(value=region.dep)= region.num+" - "+region.dep+" ("+region.regionAdmin+") "
     br
-    input(type="text", name="eventCity", id="inputEventCity", placeholder="Ville de l'évènement")
+    input(type="text", name="eventCity", id="inputEventCity", placeholder="Ville de l'événement")
     br
     select(name="eventType")
-      option(disabled selected) Type d'évènement
+      option(disabled selected) Type d'événement
       each eventT in eventtypelist
         option(value=eventT._id)= eventT.type
     br
-    input(type='text', name='eventRole', id='inputEventRole', placeholder="Rôle lié à l'évènement")
+    input(type='text', name='eventRole', id='inputEventRole', placeholder="Rôle lié à l'événement")
     br
     select(name="eventRoleType")
       option(disabled selected) Type du rôle

@@ -4,17 +4,17 @@ block header
 block content
 
   form(name='addEventType', id='formAddEventType', action='/insertEventType/addEventType', method='post')
-    h2 Ajout d'un type d'évènement
-    input(type="text", name='eventTypeName', id='inputEventTypeName', placeholder="Nouveau type d'évènement")
+    h2 Ajout d'un type d'événement
+    input(type="text", name='eventTypeName', id='inputEventTypeName', placeholder="Nouveau type d'événement")
     br
     input(type="reset", value="Effacer")
     input(type="submit", value="Enregistrer")
   br
-  h2 Les types d'évènements
+  h2 Les types d'événements
   table
     thead
       tr
-        td ID type d'évènement
+        td ID type d'événement
         td Type
     tbody
       each eventT in eventtypelist

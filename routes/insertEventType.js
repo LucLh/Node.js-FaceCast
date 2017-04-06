@@ -6,8 +6,8 @@ router.get('/', function(req,res,next) {
     //res.render('insertEventType', { titlePage: "FaceCast | Ajout d'un type d'évènement", header: "Ajout d'un type d'évènement" });
     eventType.find({},{},function(e,docs) {
         res.render('insertEventType', { 
-            titlePage: "FaceCast | Ajout d'un type d'évènement", 
-            header: "Ajout d'un type d'évènement", 
+            titlePage: "FaceCast | Ajout d'un type d'événement", 
+            header: "Ajout d'un type d'événement", 
             eventtypelist : docs
         });
     });
@@ -31,7 +31,7 @@ router.post('/addEventType', function(req, res) {
     });
 });
 
-/* Suppression d'un événement */
+/* Suppression d'un type d'événement */
 router.delete('/delete/:id', function(req,res,next) {
     var id = req.params.id;
     

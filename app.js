@@ -18,6 +18,7 @@ var events = require('./routes/events');
 var insertEvent = require('./routes/insertEvent');
 var insertEventType = require('./routes/insertEventType');
 var insertRoleType = require('./routes/insertRoleType');
+var updateEvent = require('./routes/updateEvent');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/events', events);
 app.use('/insertEvent', insertEvent);
 app.use('/insertEventType', insertEventType);
 app.use('/insertRoleType', insertRoleType);
+app.use('/updateEvent', updateEvent);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

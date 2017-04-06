@@ -10,8 +10,8 @@ var role = require('../models/role');
 router.get('/', function(req, res, next) {
     assocEventRole.find({},{},function(e, eventRoleDoc) {
         res.render('events', {
-            titlePage : "Liste des évènements et des rôles",
-            header : "Liste des évènements",
+            titlePage : "Liste des événements et des rôles",
+            header : "Liste des événements",
             eventrolelist : eventRoleDoc,
         });
     }).populate('_role').populate({ path: '_role', populate: {path:'_roleType', model:'roleType'} })
