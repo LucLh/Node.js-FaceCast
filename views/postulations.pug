@@ -1,0 +1,18 @@
+extends layout
+block header
+  h1= header
+block content
+  table
+    tr
+      th Figurant
+      th Rôle
+      th Évènement
+      th État
+    each postulation in requestlist
+      tr
+        td= postulation._figurant.firstname+" "+postulation._figurant.lastname
+        td= postulation._role.name
+        td= postulation._event.name
+        td= postulation._stateRequest.state
+        td
+          button(onclick="deleteRequest('"+postulation._id+"')") delete

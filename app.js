@@ -16,12 +16,16 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var events = require('./routes/events');
 var figurants = require('./routes/figurants');
+var postulations = require('./routes/postulations');
 var insertEvent = require('./routes/insertEvent');
 var insertEventType = require('./routes/insertEventType');
 var insertRoleType = require('./routes/insertRoleType');
 var insertFigurant = require('./routes/insertFigurant');
+var insertStateRequest = require('./routes/insertStateRequest');
+var insertPostulation = require('./routes/insertPostulation');
 var updateEvent = require('./routes/updateEvent');
 var android = require('./routes/android');
+var requestRole = require('./routes/askRole');
 
 var app = express();
 
@@ -42,12 +46,16 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/events', events);
 app.use('/figurants', figurants);
+app.use('/postulations', postulations);
 app.use('/insertEvent', insertEvent);
 app.use('/insertEventType', insertEventType);
 app.use('/insertRoleType', insertRoleType);
 app.use('/insertFigurant', insertFigurant);
+app.use('/insertStateRequest', insertStateRequest);
+app.use('/insertPostulation', insertPostulation);
 app.use('/updateEvent', updateEvent);
 app.use('/android', android);
+app.use('/askRole', requestRole);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

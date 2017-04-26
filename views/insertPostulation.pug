@@ -1,0 +1,29 @@
+extends layout
+block header
+  h1= header
+block content
+  form(name='addPostulation', id='formAddPostulation', action='/insertPostulation/addPostulation', method='post')
+    h2 Ajout d'une postulation
+    select(name='figurant')
+      option(disabled selected) Figurant concerné
+      each figurant in figurantlist
+        option(value=figurant._id)= figurant.firstname+' '+figurant.lastname
+    br
+    select(name='role')
+      option(disabled selected) Rôle souhaité
+      each role in eventrolelist
+        option(value=role._role._id)= role._role.name
+    br
+    select(name='event')
+      option(disabled selected) Évènement concerné
+      each event in eventrolelist
+        option(value=event._event._id)= event._event.name
+    br
+    select(name='state')
+      option(disabled selected) État
+      each state in statelist
+        option(value=state._id)= state.state
+    br
+    input(type="reset", value="Effacer")
+    input(type="submit", value="Enregistrer")
+    

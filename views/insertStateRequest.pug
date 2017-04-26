@@ -1,0 +1,26 @@
+extends layout
+block header
+  h1= header
+block content
+  form(name='addState', id='formAddState', action='/insertStateRequest/addState', method='post')
+    h2 Ajout d'un état
+    input(type='text', name='stateName', id='inputStateName', placeholder="Nom de l'état")
+    br
+    input(type="reset", value="Effacer")
+    input(type="submit", value="Enregistrer")
+    br
+    br
+    h2 Les états
+    table
+      thead
+        tr
+          td ID état
+          td État
+      tbody
+        each state in statelist
+          tr
+            td= state._id
+            td= state.state
+            td
+              button(onclick="deleteStateRequest('"+state._id+"')") Delete
+            

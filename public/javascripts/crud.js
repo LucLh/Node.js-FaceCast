@@ -73,3 +73,41 @@ function deleteRoleType(id) {
         alert("Annulé !");
     }
 }
+
+/* insertStateRequest.pug */
+function deleteStateRequest(id) {
+    if(confirm("Voulez-vous supprimer cet état ?")) {
+        $.ajax({
+            type : 'DELETE',
+            url : '/insertStateRequest/delete/'+id,
+            success : function(response) {
+                if(response === 'Erreur lors de la suppression..') {
+                    alert('Erreur..');
+                } else if(response === 'Suppression réussie !') {
+                    document.location.href="/insertStateRequest";
+                }
+            }
+        });
+    } else {
+        alert("Annulé !");
+    }
+}
+
+/* postulations.pug */
+function deleteRequest(id) {
+    if(confirm("Voulez-vous supprimer cette postulation ?")) {
+        $.ajax({
+            type : 'DELETE',
+            url : '/postulations/delete/'+id,
+            success : function(response) {
+                if(response === 'Erreur lors de la suppression..') {
+                    alert('Erreur..');
+                } else if(response === 'Suppression réussie !') {
+                    document.location.href="/postulations";
+                }
+            }
+        });
+    } else {
+        alert("Annulé !");
+    }
+}
