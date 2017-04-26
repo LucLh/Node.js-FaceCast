@@ -29,6 +29,5 @@ block content
             form(action='/updateEvent/'+event._event._id+'&'+event._role._id+'&'+event._id, method='get')
               input(type='submit', value='update')
           td
-            <!-- button(onclick="deleteEvent('"+event._event._id+"')") delete -->
             button(onclick="deleteEventAndRole('"+event._event._id+"','"+event._role._id+"','"+event._id+"')") Delete
             

@@ -2,6 +2,9 @@ extends layout
 block header
   h1= header
 block content
-  h2 OKAY
-
   
+  form(name='updateEvent', id='formUpdateEvent', action='/updateEvent/updateEventRole', method='post')
+    h2 Mise à jour d'un événement et du rôle associé
+    p= idTest
+    input(type='text', name='eventName', id='inputEventName', value=idTest, placeholder="Nom de l'événement")
+    

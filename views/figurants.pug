@@ -1,0 +1,24 @@
+extends layout
+block header
+  h1= header
+block content
+  h2 Figurants
+  table
+    thead
+      tr
+        th Prénom
+        th Nom
+        th Âge
+        th Adresse
+        th Email
+    tbody
+      each figurant in figurantlist
+        tr
+          td= figurant.firstname
+          td= figurant.lastname
+          td= figurant.age
+          td= figurant.address
+          td= figurant.email
+          td
+            button(onclick="deleteFigurant('"+figurant._id+"')") Delete
+          

@@ -15,10 +15,13 @@ dba.on('error', console.error.bind(console, 'MongoDB connection error:'));
 var index = require('./routes/index');
 var users = require('./routes/users');
 var events = require('./routes/events');
+var figurants = require('./routes/figurants');
 var insertEvent = require('./routes/insertEvent');
 var insertEventType = require('./routes/insertEventType');
 var insertRoleType = require('./routes/insertRoleType');
+var insertFigurant = require('./routes/insertFigurant');
 var updateEvent = require('./routes/updateEvent');
+var android = require('./routes/android');
 
 var app = express();
 
@@ -38,10 +41,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/events', events);
+app.use('/figurants', figurants);
 app.use('/insertEvent', insertEvent);
 app.use('/insertEventType', insertEventType);
 app.use('/insertRoleType', insertRoleType);
+app.use('/insertFigurant', insertFigurant);
 app.use('/updateEvent', updateEvent);
+app.use('/android', android);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

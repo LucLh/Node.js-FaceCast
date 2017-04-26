@@ -17,6 +17,25 @@ function deleteEventAndRole(idEvent,idRole,idEventRole) {
     }
 }
 
+/* figurants.pug */
+function deleteFigurant(id) {
+    if(confirm("Voulez-vous supprimer le figurant ?")) {
+        $.ajax({
+            type : 'DELETE',
+            url : '/figurants/delete/'+id,
+            success : function(response) {
+                if(response === 'Erreur lors de la suppression..') {
+                    alert('Erreur..');
+                } else if(response === 'Suppression réussie !') {
+                    document.location.href="/figurants";
+                }
+            }
+        });
+    } else {
+        alert("Annulé !");
+    }
+}
+
 /* insertEventType.pug */
 function deleteEventType(id) {
     if(confirm("Voulez-vous supprimer ce type d'évènement ?")) {

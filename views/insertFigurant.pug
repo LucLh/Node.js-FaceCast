@@ -1,0 +1,18 @@
+extends layout
+block header
+  h1= header
+block content
+  form(name='addFigurant', id='formAddFigurant', action='/insertFigurant/addFigurant', method='post')
+    h2 Ajout d'un figurant
+    input(type="text", name="figurantFirstname", id="inputFigurantFirstname", placeholder="Prénom")
+    br
+    input(type="text", name="figurantLastname", id="inputFigurantLastname", placeholder="Nom de famille")
+    br
+    input(type="text", name="figurantAge", id="inputFigurantAge", placeholder="Âge")
+    br
+    input(type="text", name="figurantAddress", id="inputFigurantAddress", placeholder="Adresse")
+    br
+    input(type="text", name="figurantEmail", id="inputFigurantEmail", placeholder="Email")
+    br
+    input(type="reset", value="Effacer")
+    input(type="submit", value="Enregistrer")
